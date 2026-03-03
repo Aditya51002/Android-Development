@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Compose_Jet">
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".Multilingual"
+            android:exported="true"
+            android:label="@string/title_activity_multilingual"
+            android:theme="@style/Theme.Compose_Jet"></activity>
+        <activity
+            android:name=".CA2ques"
+            android:exported="true"
+            android:label="@string/title_activity_ca2ques"
+            android:theme="@style/Theme.Compose_Jet"></activity>
+        <activity
+            android:name=".RadioButtonActivity"
+            android:exported="false"
+            android:label="@string/title_activity_radio_button"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".TopActionBar"
+            android:exported="false"
+            android:label="@string/title_activity_top_action_bar"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".BottomNavBar"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_nav_bar"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".SharingDatausingNavController"
+            android:exported="false"
+            android:label="@string/title_activity_sharing_datausing_nav_controller"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".ScenerioBAse"
+            android:exported="true"
+            android:label="@string/title_activity_scenerio_base"
+            android:theme="@style/Theme.Compose_Jet">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GenreChange1"
+            android:exported="false"
+            android:label="@string/title_activity_genre_change1"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".NavControl"
+            android:exported="true"
+            android:label="@string/title_activity_nav_control"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".LoginIntent"
+            android:exported="false"
+            android:label="@string/title_activity_login_intent"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".Signup"
+            android:exported="false"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".Homepage"
+            android:exported="false"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".Loginfile"
+            android:exported="false"
+            android:label="@string/title_activity_loginfile"
+            android:theme="@style/Theme.Compose_Jet" />
+        <activity
+            android:name=".SlideBar"
+            android:exported="true"
+            android:label="@string/title_activity_slide_bar"
+            android:theme="@style/Theme.Compose_Jet"></activity>
+        <activity
+            android:name=".Intnet_demo"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Compose_Jet" />
+    </application>
+
+</manifest>

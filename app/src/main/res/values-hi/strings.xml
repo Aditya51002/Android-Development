@@ -1,0 +1,28 @@
+<resources>
+    <string name="welcome">स्वागत है</string>
+    <string name="login">लॉगिन</string>
+    <string name="hellouser">नमस्ते, %s</string>
+    <string name ="Signup">पंजीकरण करना</string>
+
+    <plurals name="itemcount">
+        <item quantity="one">%d वस्तु</item>
+        <item quantity="other">%d वस्तुएँ</item>
+    </plurals>
+
+    <string name="app_name">Compose_Jet</string>
+    <string name="title_activity_slide_bar">SlideBar</string>
+    <string name="title_activity_loginfile">Loginfile</string>
+    <string name="title_activity_homepage">Homepage</string>
+    <string name="title_activity_signup">Signup</string>
+    <string name="title_activity_login_intent">LoginIntent</string>
+    <string name="title_activity_nav_control">NavControl</string>
+    <string name="title_activity_genre_change1">GenreChange1</string>
+    <string name="title_activity_scenerio_base">ScenerioBAse</string>
+    <string name="title_activity_sharing_datausing_nav_controller">SharingDatausingNavController
+    </string>
+    <string name="title_activity_bottom_nav_bar">BottomNavBar</string>
+    <string name="title_activity_top_action_bar">topActionBar</string>
+    <string name="title_activity_radio_button">radioButton</string>
+    <string name="title_activity_ca2ques">CA2ques</string>
+    <string name="title_activity_multilingual">Multilingual</string>
+</resources>
