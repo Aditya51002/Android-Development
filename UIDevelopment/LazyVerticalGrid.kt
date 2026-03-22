@@ -4,20 +4,19 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Card
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Build
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -31,70 +30,88 @@ class LazyVerticalGrid : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TeamGrid(modifier = Modifier.padding(innerPadding))
+                    LanguageGrid(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
 }
 
+data class Language(val name: String, val icon: ImageVector)
+
 @Composable
-fun TeamGrid(modifier: Modifier = Modifier) {
-    val items = listOf(
-        Team("1", "India", R.drawable.india),
-        Team("2", "South Africa", R.drawable.southafrica),
-        Team("3", "Australia", R.drawable.australia),
-        Team("4", "New Zealand", R.drawable.newzealand),
-        Team("5", "West Indies", R.drawable.westindies),
-        Team("6", "Sri Lanka", R.drawable.srilanka),
-        Team("7", "Bangladesh", R.drawable.bangladesh),
-        Team("8", "Afghanistan", R.drawable.afghanistan),
-        Team("9", "England", R.drawable.england),
-        Team("10", "Teams", R.drawable.img)
+fun LanguageGrid(modifier: Modifier = Modifier) {
+    val languages = listOf(
+        Language("Kotlin", Icons.Default.Build),
+        Language("Java", Icons.Default.Build),
+        Language("Python", Icons.Default.Build),
+        Language("C++", Icons.Default.Build),
+        Language("C#", Icons.Default.Build),
+        Language("JavaScript", Icons.Default.Build),
+        Language("TypeScript", Icons.Default.Build),
+        Language("Swift", Icons.Default.Build),
+        Language("Go", Icons.Default.Build),
+        Language("Rust", Icons.Default.Build),
+        Language("Ruby", Icons.Default.Build),
+        Language("PHP", Icons.Default.Build),
+        Language("Dart", Icons.Default.Build),
+        Language("HTML", Icons.Default.Build),
+        Language("CSS", Icons.Default.Build),
+        Language("SQL", Icons.Default.Build),
+        Language("R", Icons.Default.Build),
+        Language("Shell", Icons.Default.Build),
+        Language("Kotlin", Icons.Default.Build),
+        Language("Java", Icons.Default.Build)
     )
 
     LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
+        columns = GridCells.Fixed(3),
         modifier = modifier.fillMaxSize().padding(8.dp),
         contentPadding = PaddingValues(8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        items(items) { team ->
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .aspectRatio(1f),
-                shape = RoundedCornerShape(12.dp)
-            ) {
-                Column(
-                    modifier = Modifier.padding(8.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center
-                ) {
-                    Image(
-                        painter = painterResource(id = team.flagRes),
-                        contentDescription = team.name,
-                        modifier = Modifier
-                            .size(80.dp)
-                            .padding(bottom = 8.dp),
-                        contentScale = ContentScale.Fit
-                    )
-                    Text(
-                        text = team.name,
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.Bold
-                    )
-                }
-            }
+        items(languages) { language ->
+            LanguageItem(language)
+        }
+    }
+}
+@Composable
+fun LanguageItem(language: Language) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(150.dp),
+        shape = RoundedCornerShape(16.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+    ) {
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+                .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Icon(
+                imageVector = language.icon,
+                contentDescription = language.name,
+                modifier = Modifier.size(60.dp),
+                tint = MaterialTheme.colorScheme.primary
+            )
+            Spacer(modifier = Modifier.height(12.dp))
+            Text(
+                text = language.name,
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Bold
+            )
         }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun TeamGridPreview() {
+fun LanguageGridPreview() {
     MyApplicationTheme {
-        TeamGrid()
+        LanguageGrid()
     }
 }
