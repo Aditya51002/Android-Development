@@ -1,22 +1,25 @@
-package com.example.rating
+package com.example.androiduidevelopment
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-class MainActivity : ComponentActivity() {
+class CustomRatingBar : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -27,39 +30,58 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun EmojiRating() {
-    val context = LocalContext.current
-    var rating by remember { mutableStateOf("") }
+    val emojiList = listOf(
+        "😡" to "Very Bad",
+        "😕" to "Bad",
+        "😐" to "Okay",
+        "😊" to "Good",
+        "😍" to "Excellent"
+    )
 
-    val emojis = listOf("😡","😕","😐","😊","😍")
+    var selectedIndex by remember { mutableStateOf(-1) }
 
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-
-        Text("Rate Us", fontSize = 24.sp)
+        Text(
+            text = "Rate Us",
+            fontSize = 24.sp
+        )
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Row {
-            emojis.forEach {
-                Text(
-                    text = it,
-                    fontSize = 30.sp,
-                    modifier = Modifier
-                        .padding(8.dp)
-                        .clickable {
-                            rating = it
-                            Toast.makeText(context, "Selected $it", Toast.LENGTH_SHORT).show()
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.Top
+        ) {
+            emojiList.forEachIndexed { index, pair ->
+                val emoji = pair.first
+                val message = pair.second
+
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = emoji,
+                        fontSize = 40.sp,
+                        modifier = Modifier.clickable {
+                            selectedIndex = index
                         }
-                )
+                    )
+
+                    Spacer(modifier = Modifier.height(4.dp))
+
+                    if (selectedIndex == index) {
+                        Text(
+                            text = message,
+                            fontSize = 12.sp
+                        )
+                    }
+                }
             }
         }
-
-        Spacer(modifier = Modifier.height(20.dp))
-
-        Text("Rating: $rating")
     }
 }
 
