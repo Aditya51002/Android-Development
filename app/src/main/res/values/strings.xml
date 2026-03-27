@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Android UI Development</string>
     <string name="title_activity_custom_rating_bar">CustomRatingBar</string>
+    <string name="title_activity_listsandgrids">Listsandgrids</string>
+    <string name="title_activity_lazy_vertical_grid">LazyVerticalGrid</string>
+    <string name="title_activity_app_menu">AppMenu</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
 </resources>

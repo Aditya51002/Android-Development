@@ -11,22 +11,47 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidUIDevelopment">
+        
         <activity
-            android:name=".CustomRatingBar"
-            android:exported="false"
-            android:label="@string/title_activity_custom_rating_bar"
-            android:theme="@style/Theme.AndroidUIDevelopment" />
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.AndroidUIDevelopment">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AndroidUIDevelopment">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/Theme.AndroidUIDevelopment" />
+            
+        <activity
+            android:name=".CustomRatingBar"
+            android:exported="true"
+            android:label="@string/title_activity_custom_rating_bar"
+            android:theme="@style/Theme.AndroidUIDevelopment" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity
+            android:name=".AppMenu"
+            android:exported="true"
+            android:label="App Menu"
+            android:theme="@style/Theme.AndroidUIDevelopment" />
+
+        <activity
+            android:name=".LazyVerticalGrid"
+            android:exported="false"
+            android:label="@string/title_activity_lazy_vertical_grid"
+            android:theme="@style/Theme.AndroidUIDevelopment" />
+            
+        <activity
+            android:name=".Listsandgrids"
+            android:exported="false"
+            android:label="@string/title_activity_listsandgrids"
+            android:theme="@style/Theme.AndroidUIDevelopment" />
+            
     </application>
 
 </manifest>
