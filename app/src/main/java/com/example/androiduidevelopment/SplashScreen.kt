@@ -28,7 +28,7 @@ class SplashScreen : ComponentActivity() {
         setContent {
             AndroidUIDevelopmentTheme {
                 ZomatoSplashScreen {
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, HomeScreenActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
