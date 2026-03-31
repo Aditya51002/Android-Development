@@ -15,18 +15,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.androiduidevelopment.ui.theme.AndroidUIDevelopmentTheme
 
-class MainActivity : ComponentActivity() {
+class SecondActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             AndroidUIDevelopmentTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomeScreen(modifier = Modifier.padding(innerPadding))
+                    SecondScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -34,27 +33,18 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
-    // White background for Home Screen
+fun SecondScreen(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(Color.White),
+            .background(Color(0xFFE3F2FD)),
         contentAlignment = Alignment.Center
     ) {
         Text(
-            text = "Welcome to Zomato Clone!",
+            text = "This is the Second Screen!",
             fontSize = 24.sp,
-            fontWeight = FontWeight.Medium,
-            color = Color.Black
+            fontWeight = FontWeight.Bold,
+            color = Color.Blue
         )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AndroidUIDevelopmentTheme {
-        HomeScreen()
     }
 }
