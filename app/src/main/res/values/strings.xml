@@ -5,4 +5,5 @@
     <string name="title_activity_lazy_vertical_grid">LazyVerticalGrid</string>
     <string name="title_activity_app_menu">AppMenu</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_pending_intent">PendingIntent</string>
 </resources>
