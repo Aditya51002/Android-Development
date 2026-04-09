@@ -11,43 +11,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidUIDevelopment">
-        
         <activity
-            android:name=".SplashScreen"
-            android:exported="true">
-
-        </activity>
-
-        <activity
-            android:name=".HomeScreenActivity"
+            android:name=".PendingIntent"
             android:exported="true"
-            android:label="Home Screen" >
+            android:label="@string/title_activity_pending_intent"
+            android:theme="@style/Theme.AndroidUIDevelopment" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
 
+        </activity>
+        <activity
+            android:name=".HomeScreenActivity"
+            android:exported="true"
+            android:label="Home Screen">
+        </activity>
         <activity
             android:name=".SecondActivity"
             android:exported="true"
             android:label="Second Screen" />
-            
         <activity
             android:name=".CustomRatingBar"
             android:exported="true"
             android:label="Rating Bar" />
-
         <activity
             android:name=".AppMenu"
             android:exported="true"
             android:label="App Menu" />
-
         <activity
             android:name=".LazyVerticalGrid"
             android:exported="true"
             android:label="Lazy Grid" />
-            
     </application>
 
 </manifest>
