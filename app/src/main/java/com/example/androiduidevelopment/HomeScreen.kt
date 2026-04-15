@@ -35,7 +35,7 @@ class HomeScreenActivity : ComponentActivity() {
                     HomeScreenContent(
                         modifier = Modifier.padding(innerPadding),
                         onNavigate = {
-                            val intent = Intent(this, SecondActivity::class.java)
+                            val intent = Intent()
                             startActivity(intent)
                         }
                     )

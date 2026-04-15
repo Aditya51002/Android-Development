@@ -6,4 +6,7 @@
     <string name="title_activity_app_menu">AppMenu</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="title_activity_pending_intent">PendingIntent</string>
+    <string name="title_activity_alarm_manager">AlarmManager</string>
+    <string name="title_activity_activtiy_page_move">ActivtiyPageMove</string>
+    <string name="title_activity_clock">Clock</string>
 </resources>

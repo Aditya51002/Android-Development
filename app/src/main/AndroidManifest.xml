@@ -12,25 +12,49 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidUIDevelopment">
         <activity
-            android:name=".PendingIntent"
+            android:name=".Clock"
             android:exported="true"
-            android:label="@string/title_activity_pending_intent"
+            android:label="@string/title_activity_clock"
             android:theme="@style/Theme.AndroidUIDevelopment" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashScreen"
-            android:exported="true">
+            android:name=".ActivtiyPageMove"
+            android:exported="true"
+            android:label="@string/title_activity_activtiy_page_move"
+            android:theme="@style/Theme.AndroidUIDevelopment">
 
         </activity>
         <activity
+            android:name=".AlarmManagerActivity"
+            android:exported="true"
+            android:label="Alarm Manager Demo"
+            android:theme="@style/Theme.AndroidUIDevelopment">
+
+        </activity>
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:exported="true">
+
+        </receiver>
+
+        <activity
+            android:name=".PendingIntentActivity"
+            android:exported="true"
+            android:label="Pending Intent Demo"
+            android:theme="@style/Theme.AndroidUIDevelopment" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true" />
+        <activity
             android:name=".HomeScreenActivity"
             android:exported="true"
-            android:label="Home Screen">
-        </activity>
+            android:label="Home Screen" />
         <activity
             android:name=".SecondActivity"
             android:exported="true"

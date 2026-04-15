@@ -55,7 +55,7 @@ fun PendingIntentScreen(modifier: Modifier = Modifier) {
 }
 
 fun executePendingIntent(context: android.content.Context) {
-    val intent = Intent(context, SecondActivity::class.java)
+    val intent = Intent()
 
     val pendingIntent = PendingIntent.getActivity(
         context, 0, intent,
