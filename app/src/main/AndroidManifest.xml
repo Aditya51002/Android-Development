@@ -12,15 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidUIDevelopment">
         <activity
-            android:name=".Clock"
+            android:name=".BookingAppMIniProject"
             android:exported="true"
-            android:label="@string/title_activity_clock"
+            android:label="@string/title_activity_booking_app_mini_project"
             android:theme="@style/Theme.AndroidUIDevelopment" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Clock"
+            android:exported="true"
+            android:label="@string/title_activity_clock"
+            android:theme="@style/Theme.AndroidUIDevelopment">
+
         </activity>
         <activity
             android:name=".ActivtiyPageMove"

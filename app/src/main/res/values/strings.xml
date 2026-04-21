@@ -9,4 +9,5 @@
     <string name="title_activity_alarm_manager">AlarmManager</string>
     <string name="title_activity_activtiy_page_move">ActivtiyPageMove</string>
     <string name="title_activity_clock">Clock</string>
+    <string name="title_activity_booking_app_mini_project">BookingAppMIniProject</string>
 </resources>
